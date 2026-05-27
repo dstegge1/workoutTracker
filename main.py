@@ -1,12 +1,13 @@
 import requests
 from requests.auth import HTTPBasicAuth
 from datetime import datetime
+import os
 
-YOUR_APP_ID = "app_9fd62dd3a6a049e1b19e0599"
-YOUR_NUTRITION_API_KEY = "nix_live_NvaBipro3pO3gR2nbllVeqnjAf1OxCwA"
+YOUR_APP_ID = os.environ.get("YOUR_APP_ID")
+YOUR_NUTRITION_API_KEY = os.environ.get("YOUR_NUTRITION_API_KEY")
 # Basic Auth Username and Password
-SHEETY_USERNAME = "dstegge1"
-SHEETY_PASSWORD = "dfdfdf42323drf32"
+SHEETY_USERNAME = os.environ.get("SHEETY_USERNAME")
+SHEETY_PASSWORD = os.environ.get("SHEETY_PASSWORD")
 
 # ------------------------------------------------------------------------------------------------------
 # Get calorie count for input exercise
